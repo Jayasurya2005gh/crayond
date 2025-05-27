@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crayon'd Replica</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to top, #e0f7fa 0%, white 30%);
+      color: #000;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    .nav-right button {
+      background-color: white;
+      color: #6c4ce0;
+      border: 2px solid #6c4ce0;
+      padding: 10px 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .nav-right button:hover {
+      background-color: #6c4ce0;
+      color: white;
+    }
+
+    .hero {
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      font-weight: 800;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      color: #555;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .buttons button {
+      padding: 14px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+    background-color: #6c4ce0;
+      color: white;
+    }
+
+    .btn-primary:hover {
+     background-color: #563ac1;
+    }
+
+    .btn-outline {
+       background-color: #6c4ce0;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background-color: #563ac1;
+    }
+    .brands {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.brands h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.brand-grid div {
+  padding: 15px 10px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  transition: 0.3s;
+}
+
+.brand-grid div:hover {
+  background-color: #e0e0ff;
+  transform: translateY(-5px);
+}
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.section p {
+  color: #555;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.offerings-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.offering-card {
+  background-color: #f0f0f0;
+  padding: 30px 20px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.offering-card:nth-child(1) {
+  background-color: #ade7df;
+}
+
+.offering-card:nth-child(2) {
+  background-color: #ade7df;
+}
+
+.offering-card:nth-child(3) {
+  background-color: #ade7df;
+}
+
+.offering-card .number {
+  font-size: 40px;
+  font-weight: bold;
+  color: #d3d3d3;
+  margin-bottom: 10px;
+}
+
+.offering-card h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #000;
+}
+
+.offering-card p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #444;
+}
+.full-width-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.offerings-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.offerings-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.offer-card {
+  position: relative;
+  width: 300px;
+  padding: 60px 30px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+}
+
+.offer-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.offer-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.card-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  opacity: 0.1;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.uiux {
+  background-color: #e7f9f1;
+}
+
+.fullstack {
+  background-color: #fff1e4;
+}
+
+.frontend {
+  background-color: #f6eafa;
+}
+.benefits-section {
+  padding: 60px 30px;
+  background-color: #f9f9ff;
+  text-align: center;
+}
+
+.benefits-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.benefits-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.benefit-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.benefit-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  padding: 30px 20px;
+  text-align: left;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+
+.benefit-icon {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.benefit-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+
+.product-team-section-wrapper {
+    font-family: 'Inter', sans-serif; 
+    background-color: #1a1a2e; 
+    color: #e0e0e0; 
+    padding: 60px 20px; 
+    box-sizing: border-box; 
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    width: 100%; 
+
+
+.product-team-container { 
+    max-width: 1200px; 
+    width: 100%; 
+    text-align: center; 
+}
+
+
+.product-team-header { 
+    margin-bottom: 60px;
+}
+
+.product-team-header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.product-team-header p {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #b0b0b0;
+}
+
+
+.product-team-content-grid { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+.product-team-column { 
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.product-team-column-header-what-you-need,
+.product-team-column-header-what-you-face,
+.product-team-column-header-how-we-solve {
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1em;
+    text-align: left;
+    color: #1a1a2e; 
+}
+.product-team-column-header-what-you-need {
+    background-color: #f7d057; 
+}
+
+.product-team-column-header-what-you-face {
+    background-color: #a0a0a0; 
+}
+
+.product-team-column-header-how-we-solve {
+    background-color: #92d6e3; 
+}
+
+
+.product-team-card { 
+    background-color: #2a2a3e; 
+    border-radius: 10px;
+    padding: 25px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.product-team-card:hover {
+    transform: translateY(-77px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+}
+
+.product-team-card ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.product-team-card ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    display: flex;
+    align-items: center; 
+    font-size: 1em;
+}
+
+.product-team-card ul li:last-child {
+    border-bottom: none; 
+}
+
+
+.product-team-dot { 
+    width: 8px;
+    height: 8px;
+    border-radius: 50%; 
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.product-team-knowledge-gap { 
+    position: relative; 
+    padding-right: 30px; 
+}
+
+.product-team-knowledge-gap .connector {
+    position: absolute; 
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%); 
+    font-weight: bold;
+    color: #e0e0e0; 
+    font-size: 1.5em;
+    animation: dashPulse 1.5s infinite alternate; 
+}
+
+@keyframes dashPulse {
+    0% { opacity: 0.5; } 
+    100% { opacity: 1; }
+}
+
+@media (max-width: 992px) {
+    .product-team-content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .product-team-header h1 {
+        font-size: 1.8em;
+    }
+    .product-team-header p {
+        font-size: 1em;
+    }
+    .product-team-card {
+        padding: 20px;
+    }
+    .product-team-column-header-what-you-need,
+    .product-team-column-header-what-you-face,
+    .product-team-column-header-how-we-solve {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+}
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+     <img src="logo.png" alt="Logo" width="150">
+    </div>
+    <div class="nav-right">
+      <button>CONTACT</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1>We help startups and enterprises build products<br>
+      that are <span class="highlight">usable</span>, 
+      <span class="highlight">blazing fast</span>, 
+      <span class="highlight">bug-free</span>,<br>
+      <span class="highlight">secure</span> and 
+      <span class="highlight">scalable</span>
+    </h1>
+    <p>Product engineering, done right. 100% risk-free, expert results guaranteed.</p>
+    <div class="buttons">
+      <button class="btn-primary">VIEW PLANS</button>
+      <button class="btn-outline">SCHEDULE A CALL</button>
+    </div>
+  </section>
+  <section class="brands">
+  <h2>Brands Who Trusted Us</h2>
+  <div class="center-container">
+  <img src="brand 4.png" alt="brand">
+</div>
+<h2>ㅤ</h2>
+<div class="product-team-section-wrapper">
+    <div class="product-team-container">
+        <header class="product-team-header">
+            <h1>Don't let the challenges of building a product team slow you down. Let us help you achieve your goals</h1>
+            <p>Here's a new way to build good products.</p>
+        </header>
+
+        <div class="product-team-content-grid">
+            <div class="product-team-column">
+                <div class="product-team-column-header-what-you-need">
+                    <h3>What you need?</h3>
+                </div>
+                <div class="product-team-card">
+                    <ul>
+                        <li><span class="product-team-dot red"></span> Technical architect</li>
+                        <li><span class="product-team-dot blue"></span> Product analyst</li>
+                        <li><span class="product-team-dot red"></span> Front-end engineer</li>
+                        <li><span class="product-team-dot blue"></span> SCRUM master</li>
+                        <li><span class="product-team-dot yellow"></span> Back-end engineer</li>
+                        <li><span class="product-team-dot green"></span> UI/UX designer</li>
+                        <li><span class="product-team-dot blue"></span> UI/UX designer</li>
+                        <li><span class="product-team-dot orange"></span> Full-stack engineer</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-team-column">
+                <div class="product-team-column-header-what-you-face">
+                    <h3>What do you face?</h3>
+                </div>
+                <div class="product-team-card">
+                    <ul>
+                        <li>High monthly burn</li>
+                        <li>No guaranteed outcomes</li>
+                        <li class="product-team-knowledge-gap">Knowledge gap <span class="connector"></span></li>
+                        <li>Scaling challenges</li>
+                        <li>Limited bandwidth & focus</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product-team-column">
+                <div class="product-team-column-header-how-we-solve">
+                    <h3>How we solve?</h3>
+                </div>
+                <div class="product-team-card">
+                    <ul>
+                        <li>Dedicated + fractional roles making it easy on the pocket</li>
+                        <li>100% risk free - pay for what's shipped</li>
+                        <li>Huge knowledge capital - <br>120+ products, 12 domains</li>
+                        <li>Flexibility to scale up or down based on needs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<section class="offerings-section">
+  <h2>Our offerings</h2>
+  <p class="subtitle">From idea / problem solving to launch, we get you covered with our offerings</p>
+  
+  <div class="cards-container">
+    <div class="offer-card uiux" data-aos="fade-up" data-aos-delay="200">
+      <span class="card-number">1</span>
+      <h3>UI/UX</h3>
+      <p>Craft your idea into a delightful product experience to solve your user problems with our expert product and UI/UX design team.</p>
+    </div>
+    
+    <div class="offer-card fullstack" data-aos="fade-up" data-aos-delay="400">
+      <span class="card-number">2</span>
+      <h3>Full-stack development</h3>
+      <p>Launch your idea into a world-class product or modernize legacy systems through front-end, back-end engineering and DevOps.</p>
+    </div>
+    
+    <div class="offer-card frontend" data-aos="fade-up" data-aos-delay="600">
+      <span class="card-number">3</span>
+      <h3>Front-end development</h3>
+      <p>We help you build beautiful + usable interfaces on web / mobile and integrate them with your APIs through front-end engineering.</p>
+    </div>
+  </div>
+</section>
+<script>
+  AOS.init();
+</script>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<section class="benefits-section">
+  <h2>Benefits you’ll love</h2>
+  <p class="benefits-subtitle">And moreover, comfortably repeatable.</p>
+
+  <div class="benefit-cards">
+    <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="benefit-icon">😊</div>
+      <h3>Affordable</h3>
+      <p>High-quality product engineering services that fit your budget, without compromising on quality.</p>
+    </div>
+
+    <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+      <div class="benefit-icon">😊</div>
+      <h3>Risk-free</h3>
+      <p>Zero risks in terms of talent, scalability, and quality. Pay only for what you need, without any commitments.</p>
+    </div>
+
+    <div class="benefit-card" data-aos="fade-up" data-aos-delay="600">
+      <div class="benefit-icon">😊</div>
+      <h3>Flexible</h3>
+      <p>Product engineering services that can be scaled up or down as per your needs, do it the right way.</p>
+    </div>
+  </div>
+</section>
+<script>
+  AOS.init();
+</script>
+</section>
+</body>
+</html>
