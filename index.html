@@ -29,10 +29,13 @@
     .nav-right button {
       background-color: white;
       color: #6c4ce0;
-      border: 2px solid #6c4ce0;
-      padding: 10px 16px;
+      border: 1px solid #6c4ce0;
+      padding: 10px 9px;
       font-weight: bold;
-      border-radius: 8px;
+      font-family: Calibri;
+      font-size: 120%; 
+      font-weight: 1200%;
+      border-radius: 4px;
       cursor: pointer;
       transition: 0.3s;
     }
@@ -70,10 +73,10 @@
     }
 
     .buttons button {
-      padding: 14px 24px;
-      font-size: 16px;
+      padding: 18px 32px;
+      font-size: 20px;
       font-weight: bold;
-      border: none;
+      border: 1px solid #6c4ce0;
       border-radius: 10px;
       cursor: pointer;
       transition: 0.3s;
@@ -89,12 +92,22 @@
     }
 
     .btn-outline {
-       background-color: #6c4ce0;
-      color: white;
+    background-color: white;
+      color: #6c4ce0;
+      border: 1px solid #6c4ce0;
+      padding: 10px 9px;
+      font-weight: bold;
+      font-family: Calibri;
+      font-size: 100%; 
+      font-weight: 1200%;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: 0.3s;
     }
 
     .btn-outline:hover {
-      background-color: #563ac1;
+       background-color: #6c4ce0;
+      color: white;
     }
     .brands {
   padding: 60px 20px;
@@ -326,8 +339,12 @@
   color: #444;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+}
 
 .product-team-section-wrapper {
     font-family: 'Inter', sans-serif; 
@@ -335,8 +352,8 @@
     color: #e0e0e0; 
     padding: 60px 20px; 
     box-sizing: border-box; 
-    
-    
+}
+
     display: flex;
     justify-content: center;
     align-items: flex-start; 
@@ -437,7 +454,6 @@
     border-bottom: none; 
 }
 
-
 .product-team-dot { 
     width: 8px;
     height: 8px;
@@ -490,20 +506,35 @@
         padding: 12px 20px;
     }
 }
+nav ul {
+      display: flex;
+      list-style: none;
+      margin: -25px 25px;
+      gap: 65px;
+    }
 
+    nav ul li {
+      font-size: 16px;
+    }
+    
   </style>
 </head>
 <body>
-
   <nav>
     <div class="logo">
-     <img src="logo.png" alt="Logo" width="150">
+     <img src="logo.png" alt="Logo" width="134.5" style="position: absolute; top: 23px; margin-left: 173px;">
     </div>
+     <ul>
+      <li>Fixed Bid</li>
+      <li>Who We Are</li>
+      <li>Resources</li>
+      <li>Contact</li>
+    </ul>
     <div class="nav-right">
-      <button>CONTACT</button>
+    <button class="btn btn-warning" style="position: absolute; top: 17.5px; right: 214px;">SCHEDULE A CALL</button>
     </div>
   </nav>
-
+  <h2>ㅤ</h2>
   <section class="hero">
     <h1>We help startups and enterprises build products<br>
       that are <span class="highlight">usable</span>, 
@@ -515,8 +546,17 @@
     <p>Product engineering, done right. 100% risk-free, expert results guaranteed.</p>
     <div class="buttons">
       <button class="btn-primary">VIEW PLANS</button>
-      <button class="btn-outline">SCHEDULE A CALL</button>
+      <button class="btn-outline" >SCHEDULE A CALL</button>
     </div>
+      <div class="logo">
+     <img src="lll.png" alt="Logo" width="425" style="position: absolute; bottom: -30px; margin-left: 340px;">
+    </div>
+
+     <h2>ㅤ</h2>
+     <h2>ㅤ</h2>
+     <h2>ㅤ</h2>
+     <h2>ㅤ</h2>
+     
   </section>
   <section class="brands">
   <h2>Brands Who Trusted Us</h2>
