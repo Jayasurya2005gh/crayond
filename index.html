@@ -55,10 +55,6 @@
       margin-bottom: 20px;
     }
 
-    .highlight {
-      font-weight: 800;
-    }
-
     .hero p {
       font-size: 18px;
       margin-top: 20px;
@@ -586,23 +582,69 @@ nav ul {
   font-weight: bold;
 }
 
-.slider-container {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.hour-labels {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 10px;
-  font-weight: bold;
-}
 .plan-card ul {
   list-style-type: none;
   padding-left: 0;
 }
+.slider-section {
+  background: #eff7f7;
+  padding: 40px;
+  border-radius: 1px;
+  text-align: center;
+  position: relative;
+}
 
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #eaeaea;
+  border-radius: 20px;
+  outline: none;
+  margin-bottom: 30px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  background: #6c5ce7;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -20px;
+  font-weight: bold;
+}
+
+.slider-labels span {
+  background: #6c5ce7;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.slider-labels p {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #222;
+}
   </style>
 </head>
 <body>
@@ -796,14 +838,23 @@ nav ul {
 <div class="logo">
      <img src="Value based template.png" alt="Centered Image" class="d-block mx-auto" style="width: 1455px;">
     </div>
-    
-    <!-- Slider Section -->
-<div class="slider-container">
-  <label for="hoursSlider"><strong>Hours</strong></label><br>
-  <input type="range" min="160" max="1280" step="160" id="hoursSlider" value="160" oninput="updatePlan()" />
-  <div class="hour-labels">
-    <span>160</span><span>320</span><span>640</span><span>960</span><span>1280</span>
+   <h4>ㅤ</h4> 
+<div class="slider-section">
+  <label for="hoursRange">Hours</label>
+  <h4>ㅤ</h4>
+  <div class="slider-container">
+    <input type="range" min="160" max="1280" step="160,320" value="160" id="hoursRange" />
+    <h4>ㅤ</h4>
+    <div class="slider-labels">
+      <div><span>160</span><p>Lean</p></div>
+      <div><span>320</span><p>Grow</p></div>
+      <div><span>640</span><p>Scale</p></div>
+      <div><span>960</span><p>Scale+</p></div>
+      <div><span>1280</span><p>Enterprise</p></div>
+    </div>
+    <h4>ㅤ</h4>
   </div>
+  <div class="tooltip" id="sliderTooltip">160 hrs</div>
 </div>
 
 <!-- Cards Section -->
@@ -853,67 +904,27 @@ nav ul {
     </ul>
   </div>
 </div>
-
-
 <script>
   AOS.init();
 </script>
 </section>
-
 <script>
-  const plans = {
-    160: {
-      name: "Lean",
-      desc: "Ideal for building MVPs, POCs, modules and features",
-      hours: "160 dev hours / month",
-      points: 32,
-      engineers: 1,
-      prodOps: 0.3
-    },
-    320: {
-      name: "Startup",
-      desc: "For feature-rich MVPs and production-ready modules",
-      hours: "320 dev hours / month",
-      points: 64,
-      engineers: 2,
-      prodOps: 0.6
-    },
-    640: {
-      name: "Grow",
-      desc: "Great for scale-ups and long-term feature delivery",
-      hours: "640 dev hours / month",
-      points: 128,
-      engineers: 4,
-      prodOps: 1.0
-    },
-    960: {
-      name: "Scale",
-      desc: "Ideal for scaling large platforms with confidence",
-      hours: "960 dev hours / month",
-      points: 192,
-      engineers: 6,
-      prodOps: 1.5
-    },
-    1280: {
-      name: "Scale+",
-      desc: "Ultimate coverage for enterprise-scale delivery",
-      hours: "1280 dev hours / month",
-      points: 256,
-      engineers: 8,
-      prodOps: 2.0
-    }
-  };
+  const range = document.getElementById("hoursRange");
+  const tooltip = document.getElementById("sliderTooltip");
 
-  function updatePlan() {
-    const val = document.getElementById("hoursSlider").value;
-    const plan = plans[val];
-    document.getElementById("planName").innerText = plan.name;
-    document.getElementById("planDesc").innerText = plan.desc;
-    document.getElementById("devHours").innerText = plan.hours;
-    document.getElementById("storyPoints").innerText = plan.points;
-    document.getElementById("engineers").innerText = plan.engineers;
-    document.getElementById("prodOps").innerText = plan.prodOps;
+  function updateTooltip() {
+    const value = range.value;
+    const percent = (value - 160) / (1280 - 160);
+    const trackWidth = range.offsetWidth;
+    const thumbOffset = percent * trackWidth;
+
+    tooltip.textContent = `${value} hrs`;
+    tooltip.style.left = `${thumbOffset}px`;
   }
+
+  range.addEventListener("input", updateTooltip);
+  window.addEventListener("load", updateTooltip);
+</script>
 </script>
 </body>
 </html>
