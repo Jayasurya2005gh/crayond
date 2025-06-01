@@ -6,7 +6,7 @@
   <title>Crayon'd Replica</title>
   <style>
 
-  * {
+    *{
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -918,497 +918,708 @@
     transform: translateY(-50%) rotate(180deg);
     }
 
-</style>
-</head>
-<body>
-  <nav>
-    <div class="logo">
-     <img src="Crayond logo.png" alt="Logo" width="134.5" style="position: absolute; top: 23px; margin-left: 173px;">
-    </div>
-     <ul>
-      <li>Fixed Bid</li>
-      <li>Who We Are</li>
-      <li>Resources</li>
-      <li>Contact</li>
-    </ul>
-    <div class="nav-right">
-    <button class="btn btn-warning" style="position: absolute; top: 17.5px; right: 214px;">SCHEDULE A CALL</button>
-    </div>
-  </nav>
-  <h2>ㅤ</h2>
-  <section class="hero">
-    <h1>We help startups and enterprises build products<br>
-      that are <span class="highlight">usable</span>, 
-      <span class="highlight">blazing fast</span>, 
-      <span class="highlight">bug-free</span>,<br>
-      <span class="highlight">secure</span> and 
-      <span class="highlight">scalable</span>
-    </h1>
-    <p>Product engineering, done right. 100% risk-free, expert results guaranteed.</p>
-    <div class="buttons">
-      <button class="btn-primary">VIEW PLANS</button>
-      <button class="btn-outline" >SCHEDULE A CALL</button>
-    </div>
-      <div class="logo">
-     <img src="Side crayon image.png" alt="Logo" width="425" style="position: absolute; bottom: -30px; margin-left: 340px;">
-     <h2>ㅤ</h2>
-     <h2>ㅤ</h2>
-     <h2>ㅤ</h2>
-     <h2>ㅤ</h2>
-    </div>
+    .footer {
+    background-color: #f9f9fb;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 3rem 2rem;
+    }
+
+    .footer-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    }
+
+    .footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    }
+
+    .footer-left h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    }
+
+    .get-started {
+    background-color: #6c5ce7;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    }
+
+    .footer-logo {
+    width: 130px;
+    }
+
+    .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    }
+
+    .social-icons img {
+    width: 40px;
+    height: 40px;
+    background-color: #f0f0f5;
+    padding: 8px;
+    border-radius: 8px;
+    }
+
+    .footer-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    }
+
+    .footer-col h4 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    }
+
+    .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    .footer-col ul li {
+    margin-bottom: 0.6rem;
+    }
+
+    .footer-col ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s ease;
+    }
+
+    .footer-col ul li a:hover {
+    color: #6c5ce7;
+    }
+
+    .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    border-top: 1px solid #ddd;
+    padding-top: 1.5rem;
+    font-size: 0.95rem;
+    justify-content: space-between;
+    }
+
+    .footer-bottom a {
+    color: #333;
+    text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+    text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+    .footer-main {
+    grid-template-columns: 1fr;
+    }
+
+    .footer-columns {
+    flex-direction: column;
+    }
+
+    .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    }
+    }
     
-     <h2>ㅤ</h2>
-     <h2>ㅤ</h2>
-     <h2>ㅤ</h2>
-     <h2>ㅤ</h2>
+  </style>
+  </head>
+  <body>
+  <nav>
+  <div class="logo">
+  <img src="Crayond logo.png" alt="Logo" width="134.5" style="position: absolute; top: 23px; margin-left: 173px;">
+  </div>
+  <ul>
+    <li>Fixed Bid</li>
+    <li>Who We Are</li>
+    <li>Resources</li>
+    <li>Contact</li>
+  </ul>
+  <div class="nav-right">
+  <button class="btn btn-warning" style="position: absolute; top: 17.5px; right: 214px;">SCHEDULE A CALL</button>
+  </div>
+  </nav>
+
+  <h2>ㅤ</h2>
+
+  <section class="hero">
+  <h1>We help startups and enterprises build products<br>
+  that are <span class="highlight">usable</span>, 
+  <span class="highlight">blazing fast</span>, 
+  <span class="highlight">bug-free</span>,<br>
+  <span class="highlight">secure</span> and 
+  <span class="highlight">scalable</span>
+  </h1>
+  <p>Product engineering, done right. 100% risk-free, expert results guaranteed.</p>
+
+  <div class="buttons">
+  <button class="btn-primary">VIEW PLANS</button>
+  <button class="btn-outline" >SCHEDULE A CALL</button>
+  </div>
+
+  <div class="logo">
+  <img src="Side crayon image.png" alt="Logo" width="425" style="position: absolute; bottom: -30px; margin-left: 340px;">
+  <h2>ㅤ</h2>
+  <h2>ㅤ</h2>
+  <h2>ㅤ</h2>
+  <h2>ㅤ</h2>
+  </div>
+    
+  <h2>ㅤ</h2>
+  <h2>ㅤ</h2>
+  <h2>ㅤ</h2>
+  <h2>ㅤ</h2>
      
   </section>
   <div class="logo">
-     <img src="Unbea10.png" alt="Centered Image" class="d-block mx-auto" style="width: 910px;">
-    </div>
+  <img src="Unbea10.png" alt="Centered Image" class="d-block mx-auto" style="width: 910px;">
+  </div>
 
   <section class="brands">
   <h2>Brands Who Trusted Us</h2>
   <div class="center-container">
   <img src="All brands.png" alt="brand" style="width: 1130px;">
-</div>
-<h2>ㅤ</h2>
+  </div>
 
-<div class="product-team-section-wrapper">
-    <div class="product-team-container">
-        <header class="product-team-header">
-            <h1>Don't let the challenges of building a product team slow you down. Let us help you achieve your goals</h1>
-            <p>Here's a new way to build good products.</p>
-        </header>
+  <h2>ㅤ</h2>
 
-        <div class="product-team-content-grid">
-            <div class="product-team-column">
-                <div class="product-team-column-header-what-you-need">
-                    <h3>What you need?</h3>
-                </div>
-                <div class="product-team-card">
-                    <ul>
-                        <li><span class="product-team-dot red"></span> Technical architect</li>
-                        <li><span class="product-team-dot blue"></span> Product analyst</li>
-                        <li><span class="product-team-dot red"></span> Front-end engineer</li>
-                        <li><span class="product-team-dot blue"></span> SCRUM master</li>
-                        <li><span class="product-team-dot yellow"></span> Back-end engineer</li>
-                        <li><span class="product-team-dot green"></span> UI/UX designer</li>
-                        <li><span class="product-team-dot blue"></span> UI/UX designer</li>
-                        <li><span class="product-team-dot orange"></span> Full-stack engineer</li>
-                    </ul>
-                </div>
-            </div>
+  <div class="product-team-section-wrapper">
+  <div class="product-team-container">
+  <header class="product-team-header">
+  <h1>Don't let the challenges of building a product team slow you down. Let us help you achieve your goals</h1>
+  <p>Here's a new way to build good products.</p>
+  </header>
 
-            <div class="product-team-column">
-                <div class="product-team-column-header-what-you-face">
-                    <h3>What do you face?</h3>
-                </div>
-                <div class="product-team-card">
-                    <ul>
-                        <li>High monthly burn</li>
-                        <li>No guaranteed outcomes</li>
-                        <li class="product-team-knowledge-gap">Knowledge gap <span class="connector"></span></li>
-                        <li>Scaling challenges</li>
-                        <li>Limited bandwidth & focus</li>
-                    </ul>
-                </div>
-            </div>
+  <div class="product-team-content-grid">
+  <div class="product-team-column">
+  <div class="product-team-column-header-what-you-need">
+  <h3>What you need?</h3>
+  </div>
 
-            <div class="product-team-column">
-                <div class="product-team-column-header-how-we-solve">
-                    <h3>How we solve?</h3>
-                </div>
-                <div class="product-team-card">
-                    <ul>
-                        <li>Dedicated + fractional roles making it easy on the pocket</li>
-                        <li>100% risk free - pay for what's shipped</li>
-                        <li>Huge knowledge capital - <br>120+ products, 12 domains</li>
-                        <li>Flexibility to scale up or down based on needs</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<section class="offerings-section">
+  <div class="product-team-card">
+  <ul>
+    <li><span class="product-team-dot red"></span> Technical architect</li>
+    <li><span class="product-team-dot blue"></span> Product analyst</li>
+    <li><span class="product-team-dot red"></span> Front-end engineer</li>
+    <li><span class="product-team-dot blue"></span> SCRUM master</li>
+    <li><span class="product-team-dot yellow"></span> Back-end engineer</li>
+    <li><span class="product-team-dot green"></span> UI/UX designer</li>
+    <li><span class="product-team-dot blue"></span> UI/UX designer</li>
+    <li><span class="product-team-dot orange"></span> Full-stack engineer</li>
+  </ul>
+  </div>
+  </div>
+
+  <div class="product-team-column">
+  <div class="product-team-column-header-what-you-face">
+  <h3>What do you face?</h3>
+  </div>
+
+  <div class="product-team-card">
+  <ul>
+    <li>High monthly burn</li>
+    <li>No guaranteed outcomes</li>
+    <li class="product-team-knowledge-gap">Knowledge gap <span class="connector"></span></li>
+    <li>Scaling challenges</li>
+    <li>Limited bandwidth & focus</li>
+  </ul>
+  </div>
+  </div>
+
+  <div class="product-team-column">
+  <div class="product-team-column-header-how-we-solve">
+  <h3>How we solve?</h3>
+  </div>
+
+  <div class="product-team-card">
+  <ul>
+    <li>Dedicated + fractional roles making it easy on the pocket</li>
+    <li>100% risk free - pay for what's shipped</li>
+    <li>Huge knowledge capital - <br>120+ products, 12 domains</li>
+    <li>Flexibility to scale up or down based on needs</li>
+  </ul>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <section class="offerings-section">
   <h2>Our offerings</h2>
   <p class="subtitle">From idea / problem solving to launch, we get you covered with our offerings</p>
   
   <div class="cards-container">
-    <div class="offer-card uiux" data-aos="fade-up" data-aos-delay="200">
-      <span class="card-number">1</span>
-      <h3>UI/UX</h3>
-      <p>Craft your idea into a delightful product experience to solve your user problems with our expert product and UI/UX design team.</p>
-    </div>
-    
-    <div class="offer-card fullstack" data-aos="fade-up" data-aos-delay="400">
-      <span class="card-number">2</span>
-      <h3>Full-stack development</h3>
-      <p>Launch your idea into a world-class product or modernize legacy systems through front-end, back-end engineering and DevOps.</p>
-    </div>
-    
-    <div class="offer-card frontend" data-aos="fade-up" data-aos-delay="600">
-      <span class="card-number">3</span>
-      <h3>Front-end development</h3>
-      <p>We help you build beautiful + usable interfaces on web / mobile and integrate them with your APIs through front-end engineering.</p>
-    </div>
+  <div class="offer-card uiux" data-aos="fade-up" data-aos-delay="200">
+  <span class="card-number">1</span>
+  <h3>UI/UX</h3>
+  <p>Craft your idea into a delightful product experience to solve your user problems with our expert product and UI/UX design team.</p>
   </div>
-</section>
-<script>
+    
+  <div class="offer-card fullstack" data-aos="fade-up" data-aos-delay="400">
+  <span class="card-number">2</span>
+  <h3>Full-stack development</h3>
+  <p>Launch your idea into a world-class product or modernize legacy systems through front-end, back-end engineering and DevOps.</p>
+  </div>
+    
+  <div class="offer-card frontend" data-aos="fade-up" data-aos-delay="600">
+  <span class="card-number">3</span>
+  <h3>Front-end development</h3>
+  <p>We help you build beautiful + usable interfaces on web / mobile and integrate them with your APIs through front-end engineering.</p>
+  </div>
+  </div>
+  </section>
+  <script>
   AOS.init();
-</script>
+  </script>
 
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<section class="benefits-section">
+  <section class="benefits-section">
   <h2>Benefits you’ll love</h2>
   <p class="benefits-subtitle">And moreover, comfortably repeatable.</p>
 
   <div class="benefit-cards">
-    <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
-      <div class="benefit-icon">😊</div>
-      <h3>Affordable</h3>
-      <p>High-quality product engineering services that fit your budget, without compromising on quality.</p>
-    </div>
-
-    <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
-      <div class="benefit-icon">😊</div>
-      <h3>Risk-free</h3>
-      <p>Zero risks in terms of talent, scalability, and quality. Pay only for what you need, without any commitments.</p>
-    </div>
-
-    <div class="benefit-card" data-aos="fade-up" data-aos-delay="600">
-      <div class="benefit-icon">😊</div>
-      <h3>Flexible</h3>
-      <p>Product engineering services that can be scaled up or down as per your needs, do it the right way.</p>
-    </div>
+  <div class="benefit-card" data-aos="fade-up" data-aos-delay="200">
+  <div class="benefit-icon">😊</div>
+  <h3>Affordable</h3>
+  <p>High-quality product engineering services that fit your budget, without compromising on quality.</p>
   </div>
-</section>
-<div class="scrolling-wrapper bg-light py-3 overflow-hidden">
+
+  <div class="benefit-card" data-aos="fade-up" data-aos-delay="400">
+  <div class="benefit-icon">😊</div>
+  <h3>Risk-free</h3>
+  <p>Zero risks in terms of talent, scalability, and quality. Pay only for what you need, without any commitments.</p>
+  </div>
+
+  <div class="benefit-card" data-aos="fade-up" data-aos-delay="600">
+  <div class="benefit-icon">😊</div>
+  <h3>Flexible</h3>
+  <p>Product engineering services that can be scaled up or down as per your needs, do it the right way.</p>
+  </div>
+  </div>
+  </section>
+  <div class="scrolling-wrapper bg-light py-3 overflow-hidden">
   <div class="scrolling-text d-flex">
-    <div class="scroll-box mx-2">Modern Engineering</div>
-    <div class="scroll-box mx-2">Delightful Experience</div>
-    <div class="scroll-box mx-2">Faster to the Market</div>
-    <div class="scroll-box mx-2">Truly Built for Customers</div>
-    <div class="scroll-box mx-2">Full Ownership of Actions</div>
-    <div class="scroll-box mx-2">Bug-Free Delivery</div>
-    <div class="scroll-box mx-2">Best of Standards</div>
-    <div class="scroll-box mx-2">Automated assessments</div>
-    <div class="scroll-box mx-2">Minimal tech debt</div>
-    <div class="scroll-box mx-2">Frameworks to SaaSify</div>
-    <div class="scroll-box mx-2">Completely agile</div>
-    <div class="scroll-box mx-2">Secure and scalable</div>
-    <div class="scroll-box mx-2">Idea to product</div>
-    <div class="scroll-box mx-2">Matured deliveryops</div>
-    <div class="scroll-box mx-2">Collaborative and as one team</div>
+  <div class="scroll-box mx-2">Modern Engineering</div>
+  <div class="scroll-box mx-2">Delightful Experience</div>
+  <div class="scroll-box mx-2">Faster to the Market</div>
+  <div class="scroll-box mx-2">Truly Built for Customers</div>
+  <div class="scroll-box mx-2">Full Ownership of Actions</div>
+  <div class="scroll-box mx-2">Bug-Free Delivery</div>
+  <div class="scroll-box mx-2">Best of Standards</div>
+  <div class="scroll-box mx-2">Automated assessments</div>
+  <div class="scroll-box mx-2">Minimal tech debt</div>
+  <div class="scroll-box mx-2">Frameworks to SaaSify</div>
+  <div class="scroll-box mx-2">Completely agile</div>
+  <div class="scroll-box mx-2">Secure and scalable</div>
+  <div class="scroll-box mx-2">Idea to product</div>
+  <div class="scroll-box mx-2">Matured deliveryops</div>
+  <div class="scroll-box mx-2">Collaborative and as one team</div>
   </div>
-</div>
-<h2>ㅤ</h2>
-<div class="logo">
-     <img src="Value based template.png" alt="Centered Image" class="d-block mx-auto" style="width: 1455px;">
-    </div>
-   <h4>ㅤ</h4> 
-<div class="slider-section">
+  </div>
+
+  <h2>ㅤ</h2>
+
+  <div class="logo">
+  <img src="Value based template.png" alt="Centered Image" class="d-block mx-auto" style="width: 1455px;">
+  </div>
+
+  <h4>ㅤ</h4> 
+
+  <div class="slider-section">
   <label for="hoursRange">Hours</label>
+
   <h4>ㅤ</h4>
+
   <div class="slider-container">
-    <input type="range" min="160" max="1280" step="160,320" value="160" id="hoursRange" />
-    <h4>ㅤ</h4>
-    <div class="slider-labels">
-      <div><span>160</span><p>Lean</p></div>
-      <div><span>320</span><p>Grow</p></div>
-      <div><span>640</span><p>Scale</p></div>
-      <div><span>960</span><p>Scale+</p></div>
-      <div><span>1280</span><p>Enterprise</p></div>
-    </div>
-    <h4>ㅤ</h4>
+  <input type="range" min="160" max="1280" step="160,320" value="160" id="hoursRange" />
+  <h4>ㅤ</h4>
+  <div class="slider-labels">
+  <div><span>160</span><p>Lean</p></div>
+  <div><span>320</span><p>Grow</p></div>
+  <div><span>640</span><p>Scale</p></div>
+  <div><span>960</span><p>Scale+</p></div>
+  <div><span>1280</span><p>Enterprise</p></div>
+  </div>
+
+  <h4>ㅤ</h4>
+
   </div>
   <div class="tooltip" id="sliderTooltip">160 hrs</div>
-</div>
+  </div>
 
-
-<div class="plan-wrapper">
-
+  <div class="plan-wrapper">
   <div class="plan-card">
-    <h3 id="planName">Lean</h3>
-    <p id="planDesc">Ideal for building MVPs, POCs, modules and features</p>
-    <p class="highlight" id="devHours">160 dev hours / month</p>
-    <p><strong><span id="storyPoints">32</span></strong> Story points</p>
-    <p><span id="engineers">1</span> Engineer(s) + <span id="prodOps">0.3</span> ProdOps</p>
-    <button class="button">Unlock Pricing</button>
+  <h3 id="planName">Lean</h3>
+  <p id="planDesc">Ideal for building MVPs, POCs, modules and features</p>
+  <p class="highlight" id="devHours">160 dev hours / month</p>
+  <p><strong><span id="storyPoints">32</span></strong> Story points</p>
+  <p><span id="engineers">1</span> Engineer(s) + <span id="prodOps">0.3</span> ProdOps</p>
+  <button class="button">Unlock Pricing</button>
   </div>
 
   <div class="plan-card" style="text-align: left;">
-    <h4><strong>Plan includes:</strong></h4>
-    <ul>
-      <li>Dedicated account manager</li>
-      <li>Full-stack development</li>
-      <li>Technical analysis</li>
-      <li>Product development artifacts</li>
-      <li>Project management</li>
-      <li>Quality assurance</li>
-      <li>Clean code & best practices</li>
-      <li>VAPT report</li>
-      <li>Performance report</li>
-      <li>DevOps support</li>
-    </ul>
+  <h4><strong>Plan includes:</strong></h4>
+  <ul>
+    <li>Dedicated account manager</li>
+    <li>Full-stack development</li>
+    <li>Technical analysis</li>
+    <li>Product development artifacts</li>
+    <li>Project management</li>
+    <li>Quality assurance</li>
+    <li>Clean code & best practices</li>
+    <li>VAPT report</li>
+    <li>Performance report</li>
+    <li>DevOps support</li>
+  </ul>
   </div>
 
   <div class="plan-card" style="text-align: left;">
-    <h4><strong>Terms:</strong></h4>
-    <ul>
-      <li>2 months minimum commitment + 1-month notice</li>
-      <li>20% one-time engagement fee</li>
-      <li>Your IP is only yours</li>
-      <li>Accelerate with pre-built frameworks</li>
-      <li>Discounts:
-        <ul>
-          <li>5% quarterly</li>
-          <li>10% half-yearly</li>
-          <li>20% yearly</li>
-        </ul>
-      </li>
-    </ul>
+  <h4><strong>Terms:</strong></h4>
+  <ul>
+    <li>2 months minimum commitment + 1-month notice</li>
+    <li>20% one-time engagement fee</li>
+    <li>Your IP is only yours</li>
+    <li>Accelerate with pre-built frameworks</li>
+    <li>Discounts:
+  <ul>
+    <li>5% quarterly</li>
+    <li>10% half-yearly</li>
+    <li>20% yearly</li>
+  </ul>
+  </li>
+  </ul>
   </div>
-</div>
-<script>
+  </div>
+  <script>
   AOS.init();
-</script>
-</section>
-<script>
+  </script>
+  </section>
+
+  <script>
   const range = document.getElementById("hoursRange");
   const tooltip = document.getElementById("sliderTooltip");
 
   function updateTooltip() {
-    const value = range.value;
-    const percent = (value - 160) / (1280 - 160);
-    const trackWidth = range.offsetWidth;
-    const thumbOffset = percent * trackWidth;
-
-    tooltip.textContent = `${value} hrs`;
-    tooltip.style.left = `${thumbOffset}px`;
+  const value = range.value;
+  const percent = (value - 160) / (1280 - 160);
+  const trackWidth = range.offsetWidth;
+  const thumbOffset = percent * trackWidth;
+  tooltip.textContent = `${value} hrs`;
+  tooltip.style.left = `${thumbOffset}px`;
   }
 
   range.addEventListener("input", updateTooltip);
   window.addEventListener("load", updateTooltip);
-</script>
-<div class="fixed-bid-section">
+  </script>
+
+  <div class="fixed-bid-section">
   <h2>Looking for a fixed-bid model to work with?</h2>
   <p>We have executed several large fixed-bid projects, we’d love to talk.</p>
   <div class="underline"></div>
   <div class="model-label">Our fixed-bid engagement models</div>
   <div class="btn-group">
-    <button class="btn-option">Cash only</button>
-    <button class="btn-option">Cash + equity</button>
+  <button class="btn-option">Cash only</button>
+  <button class="btn-option">Cash + equity</button>
   </div>
+
   <a href="https://www.crayond.com/fixed-bid" class="view-details">
-    VIEW DETAILS <span class="arrow">➜</span>
+  VIEW DETAILS <span class="arrow">➜</span>
   </a>
-</div>
-<h2>ㅤ</h2>
-<section class="process-section">
+  </div>
+
+  <h2>ㅤ</h2>
+  
+  <section class="process-section">
   <h2 class="process-title">Know our process and how we deliver</h2>
   <p class="process-subtitle">
-    From start to finish, we keep you informed with stage-wise updates.
+  From start to finish, we keep you informed with stage-wise updates.
   </p>
 
   <div class="toggle-buttons">
-    <button id="btn-idea" class="active" onclick="toggleView('idea')">Idea to design</button>
-    <button id="btn-build" onclick="toggleView('build')">Design to build</button>
+  <button id="btn-idea" class="active" onclick="toggleView('idea')">Idea to design</button>
+  <button id="btn-build" onclick="toggleView('build')">Design to build</button>
   </div>
 
   <div id="idea-section" class="process-cards">
-    <div class="card"><h4>01</h4><p>Get to know the business problem, product & scope</p></div>
-    <div class="card"><h4>02</h4><p>We convert the problem statements into user stories</p></div>
-    <div class="card"><h4>03</h4><p>We produce wireframes for those stories</p></div>
-    <div class="card"><h4>04</h4><p>We collaborate with you to be on the same page</p></div>
-    <div class="card"><h4>05</h4><p>We create the estimates for full-fledged design</p></div>
-    <div class="card"><h4>06</h4><p>We seek your approval on the estimates and go ahead</p></div>
-    <div class="card"><h4>07</h4><p>Our experts turn stories into design prototype</p></div>
-    <div class="card"><h4>08</h4><p>We iterate with you to freeze the design</p></div>
+  <div class="card"><h4>01</h4><p>Get to know the business problem, product & scope</p></div>
+  <div class="card"><h4>02</h4><p>We convert the problem statements into user stories</p></div>
+  <div class="card"><h4>03</h4><p>We produce wireframes for those stories</p></div>
+  <div class="card"><h4>04</h4><p>We collaborate with you to be on the same page</p></div>
+  <div class="card"><h4>05</h4><p>We create the estimates for full-fledged design</p></div>
+  <div class="card"><h4>06</h4><p>We seek your approval on the estimates and go ahead</p></div>
+  <div class="card"><h4>07</h4><p>Our experts turn stories into design prototype</p></div>
+  <div class="card"><h4>08</h4><p>We iterate with you to freeze the design</p></div>
   </div>
 
   <div id="build-section" class="process-cards" style="display: none;">
-    <div class="card"><h4>01</h4><p>Engineering team analyzes the stories and prototype</p></div>
-    <div class="card"><h4>02</h4><p>We estimate the stories based on complexity</p></div>
-    <div class="card"><h4>03</h4><p>We create release plan based on estimated stories</p></div>
-    <div class="card"><h4>04</h4><p>We seek your approval on the estimates & release plan</p></div>
-    <div class="card"><h4>05</h4><p>Our engineers build & release features based on plan</p></div>
-    <div class="card"><h4>06</h4><p>We do the QA and make it ready for you to test</p></div>
-    <div class="card"><h4>07</h4><p>We iterate on feedbacks or bugs through the test cycle</p></div>
-    <div class="card"><h4>08</h4><p>We send automated quality report after release</p></div>
+  <div class="card"><h4>01</h4><p>Engineering team analyzes the stories and prototype</p></div>
+  <div class="card"><h4>02</h4><p>We estimate the stories based on complexity</p></div>
+  <div class="card"><h4>03</h4><p>We create release plan based on estimated stories</p></div>
+  <div class="card"><h4>04</h4><p>We seek your approval on the estimates & release plan</p></div>
+  <div class="card"><h4>05</h4><p>Our engineers build & release features based on plan</p></div>
+  <div class="card"><h4>06</h4><p>We do the QA and make it ready for you to test</p></div>
+  <div class="card"><h4>07</h4><p>We iterate on feedbacks or bugs through the test cycle</p></div>
+  <div class="card"><h4>08</h4><p>We send automated quality report after release</p></div>
   </div>
-</section>
-</script>
-<h2>ㅤ</h2>
-<section class="facts-section">
+  </section>
+  </script>
+
+  <h2>ㅤ</h2>
+
+  <section class="facts-section">
   <h2 class="facts-title">Here are the facts</h2>
   <p class="facts-subtitle">
-    When you want reliability and outcomes, choose us. You will love us just like our customers.
+  When you want reliability and outcomes, choose us. You will love us just like our customers.
   </p>
 
   <div class="facts-table">
-    <table>
-      <thead>
-        <tr>
-          <th></th>
-          <th>Standard<br>development agencies</th>
-          <th>In-house</th>
-          <th>Crayon’d ✨</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Value for the money</td>
-          <td>💰💰💰 Risky</td>
-          <td>💰 Risky</td>
-          <td>💰 Risk-free +<br>value driven</td>
-        </tr>
-        <tr>
-          <td>Knowledge capital (Ideation + design + dev + scrum)</td>
-          <td>🧑‍💻 Minimal</td>
-          <td>🧑‍💻 Minimal</td>
-          <td>🧠 Very high</td>
-        </tr>
-        <tr>
-          <td>Truly agile</td>
-          <td>🧑‍💻 Partially</td>
-          <td>🧑‍💻 Partially</td>
-          <td>✅ Assured</td>
-        </tr>
-        <tr>
-          <td>Experience in shipping successful products</td>
-          <td>🧑‍💻 Maybe</td>
-          <td>🧑‍💻 Maybe</td>
-          <td>🚀 Solid case studies</td>
-        </tr>
-        <tr>
-          <td>Crafting delightful product experiences</td>
-          <td>📉 Mediocre results</td>
-          <td>👍 Good results</td>
-          <td>💖 Crafted with love</td>
-        </tr>
-        <tr>
-          <td>Accelerate product vision with pre-built frameworks</td>
-          <td>❌ No shortcuts</td>
-          <td>❌ No shortcuts</td>
-          <td>🧰 Powerful frameworks</td>
-        </tr>
-        <tr>
-          <td>Smooth delivery-ops throughout product life cycle</td>
-          <td>🧑‍💻 A mixed bag</td>
-          <td>🧑‍💻 A mixed bag</td>
-          <td>🔥 Matured delivery-ops</td>
-        </tr>
-        <tr>
-          <td>Cost-effective scaled product engineering</td>
-          <td>💰💰❌ Expensive and inefficient</td>
-          <td>💰❌ Expensive and inefficient</td>
-          <td>✅ Scalable and efficient</td>
-        </tr>
-      </tbody>
-    </table>
+  <table>
+  <thead>
+  <tr>
+    <th></th>
+    <th>Standard<br>development agencies</th>
+    <th>In-house</th>
+    <th>Crayon’d ✨</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <tr>
+    <td>Value for the money</td>
+    <td>💰💰💰 Risky</td>
+    <td>💰 Risky</td>
+    <td>💰 Risk-free +<br>value driven</td>
+  </tr>
+
+  <tr>
+    <td>Knowledge capital (Ideation + design + dev + scrum)</td>
+    <td>🧑‍💻 Minimal</td>
+    <td>🧑‍💻 Minimal</td>
+    <td>🧠 Very high</td>
+  </tr>
+
+  <tr>
+    <td>Truly agile</td>
+    <td>🧑‍💻 Partially</td>
+    <td>🧑‍💻 Partially</td>
+    <td>✅ Assured</td>
+  </tr>
+
+  <tr>
+    <td>Experience in shipping successful products</td>
+    <td>🧑‍💻 Maybe</td>
+    <td>🧑‍💻 Maybe</td>
+    <td>🚀 Solid case studies</td>
+  </tr>
+
+  <tr>
+    <td>Crafting delightful product experiences</td>
+    <td>📉 Mediocre results</td>
+    <td>👍 Good results</td>
+    <td>💖 Crafted with love</td>
+  </tr>
+
+  <tr>
+    <td>Accelerate product vision with pre-built frameworks</td>
+    <td>❌ No shortcuts</td>
+    <td>❌ No shortcuts</td>
+    <td>🧰 Powerful frameworks</td>
+  </tr>
+
+  <tr>
+    <td>Smooth delivery-ops throughout product life cycle</td>
+    <td>🧑‍💻 A mixed bag</td>
+    <td>🧑‍💻 A mixed bag</td>
+    <td>🔥 Matured delivery-ops</td>
+  </tr>
+
+  <tr>
+    <td>Cost-effective scaled product engineering</td>
+    <td>💰💰❌ Expensive and inefficient</td>
+    <td>💰❌ Expensive and inefficient</td>
+    <td>✅ Scalable and efficient</td>
+  </tr>
+  </tbody>
+  </table>
   </div>
-</section>
+  </section>
+
   <img src="Our journey.png" alt="brand" style="width: 1500px;">
   <img src="Hear from delighted customers.png" alt="brand" style="width: 1500px;">
-<h2>ㅤ</h2>
+
+  <h2>ㅤ</h2>
 
   <section class="faq-section">
   <h2 class="faq-title">Frequently asked questions</h2>
   <div class="faq-grid">
-    <div class="faq-item">
-      <button class="faq-question">Can we sign an NDA? <span class="arrow">▼</span></button>
-      <div class="faq-answer">Yes, that would be the first step. We value your trust, business, and ideas. Your sensitive information will be handled with utmost confidentiality as we partner in your success.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">Do you offer any guarantees? <span class="arrow">▼</span></button>
-      <div class="faq-answer">Yes, all our plans come up with guaranteed story points for each month. And, we make sure your product is clean, bug-free and built with the best quality standards.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">Do you provide support services after the product development?<span class="arrow">▼</span></button>
-      <div class="faq-answer">Yes, we can provide you tailor made maintenance plans. And if needed, we can help you further develop the product with new features or integrating third party services.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">Can you work across different time zones? <span class="arrow">▼</span></button>
-      <div class="faq-answer">Our schedule aligns with yours, guaranteeing at least 3 hours of overlap to ensure there’s no delay in communication and we’re well-within your reach when needed.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">Do you have experience working with in-house dev or design teams? <span class="arrow">▼</span></button>
-      <div class="faq-answer">Yes, we have the experience and we love to collaborate with external teams. We believe working together eliminates clutter, brings more focus & clarity towards the big picture.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">Do you employ freelancers? <span class="arrow">▼</span></button>
-      <div class="faq-answer">No, we don’t employ freelancers. We have a handpicked expert team who have a proven track record of building quality products and go through continuous upskilling.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">How do you certify the quality of features built? <span class="arrow">▼</span></button>
-      <div class="faq-answer">We use automation tools to prioritize performance, security, and quality to ensure our standards are met. With our focus on automation, we deliver the best results.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">What do you refer to as pre-built frameworks? <span class="arrow">▼</span></button>
-      <div class="faq-answer">We turn many common functionalities and user interfaces into reusable components that can accelerate your product engineering efforts.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">Who owns the code and IP? <span class="arrow">▼</span></button>
-      <div class="faq-answer">You own 100% of the code and the IP except for our pre-built frameworks which are packaged as part of your code but we have the right to reuse them.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">What industries do you offer? <span class="arrow">▼</span></button>
-      <div class="faq-answer">We have worked with a wide variety of industries from travel, healthcare, fintech, collaboration, real-estate, eCommerce, web3, fan engagement to saas and much more.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">What communication and project management tools do you use? <span class="arrow">▼</span></button>
-      <div class="faq-answer">We use project management tools like Jira and Slack for communication. Reaching us shouldn't be a problem as we take full ownership of working on your product.</div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">Where are your company and team located? <span class="arrow">▼</span></button>
-      <div class="faq-answer">Our headquarters and our team are located in Chennai (SaaS capital of India), the bustling city is home to a thriving tech community, startups and established companies.</div>
-    </div>
+  <div class="faq-item">
+  <button class="faq-question">Can we sign an NDA? <span class="arrow">▼</span></button>
+  <div class="faq-answer">Yes, that would be the first step. We value your trust, business, and ideas. Your sensitive information will be handled with utmost confidentiality as we partner in your success.</div>
   </div>
-</section>
-<script>
-function toggleView(mode) {
+
+  <div class="faq-item">
+  <button class="faq-question">Do you offer any guarantees? <span class="arrow">▼</span></button>
+  <div class="faq-answer">Yes, all our plans come up with guaranteed story points for each month. And, we make sure your product is clean, bug-free and built with the best quality standards.</div>
+  </div>
+
+  <div class="faq-item">
+  <button class="faq-question">Do you provide support services after the product development?<span class="arrow">▼</span></button>
+  <div class="faq-answer">Yes, we can provide you tailor made maintenance plans. And if needed, we can help you further develop the product with new features or integrating third party services.</div>
+  </div>
+
+  <div class="faq-item">
+  <button class="faq-question">Can you work across different time zones? <span class="arrow">▼</span></button>
+  <div class="faq-answer">Our schedule aligns with yours, guaranteeing at least 3 hours of overlap to ensure there’s no delay in communication and we’re well-within your reach when needed.</div>
+  </div>
+
+  <div class="faq-item">
+  <button class="faq-question">Do you have experience working with in-house dev or design teams? <span class="arrow">▼</span></button>
+  <div class="faq-answer">Yes, we have the experience and we love to collaborate with external teams. We believe working together eliminates clutter, brings more focus & clarity towards the big picture.</div>
+  </div>
+
+  <div class="faq-item">
+  <button class="faq-question">Do you employ freelancers? <span class="arrow">▼</span></button>
+  <div class="faq-answer">No, we don’t employ freelancers. We have a handpicked expert team who have a proven track record of building quality products and go through continuous upskilling.</div>
+  </div>
+
+  <div class="faq-item">
+  <button class="faq-question">How do you certify the quality of features built? <span class="arrow">▼</span></button>
+  <div class="faq-answer">We use automation tools to prioritize performance, security, and quality to ensure our standards are met. With our focus on automation, we deliver the best results.</div>
+  </div>
+
+  <div class="faq-item">
+  <button class="faq-question">What do you refer to as pre-built frameworks? <span class="arrow">▼</span></button>
+  <div class="faq-answer">We turn many common functionalities and user interfaces into reusable components that can accelerate your product engineering efforts.</div>
+  </div>
+
+  <div class="faq-item">
+  <button class="faq-question">Who owns the code and IP? <span class="arrow">▼</span></button>
+  <div class="faq-answer">You own 100% of the code and the IP except for our pre-built frameworks which are packaged as part of your code but we have the right to reuse them.</div>
+  </div>
+
+  <div class="faq-item">
+  <button class="faq-question">What industries do you offer? <span class="arrow">▼</span></button>
+  <div class="faq-answer">We have worked with a wide variety of industries from travel, healthcare, fintech, collaboration, real-estate, eCommerce, web3, fan engagement to saas and much more.</div>
+  </div>
+
+  <div class="faq-item">
+  <button class="faq-question">What communication and project management tools do you use? <span class="arrow">▼</span></button>
+  <div class="faq-answer">We use project management tools like Jira and Slack for communication. Reaching us shouldn't be a problem as we take full ownership of working on your product.</div>
+  </div>
+
+  <div class="faq-item">
+  <button class="faq-question">Where are your company and team located? <span class="arrow">▼</span></button>
+  <div class="faq-answer">Our headquarters and our team are located in Chennai (SaaS capital of India), the bustling city is home to a thriving tech community, startups and established companies.</div>
+  </div>
+  </div>
+  </section>
+
+  <footer class="footer">
+  <div class="footer-main">
+  <div class="footer-left">
+  <h2>Ready to make something amazing?</h2>
+  <button class="get-started">GET STARTED</button>
+  <img src="Crayond unbea10.png" alt="Crayond Logo" class="footer-logo" />
+  <p>© Crayond Digital Pvt. Ltd.<br>All rights reserved</p>
+  <div class="social-icons">
+    <a href="#"><img src="Linkedin image.png" alt="LinkedIn" /></a>
+    <a href="#"><img src="Facebook image.png" alt="Facebook" /></a>
+    <a href="#"><img src="Instagram image.png" alt="Instagram" /></a>
+    <a href="#"><img src="X image.png" alt="Twitter" /></a>
+  </div>
+  </div>
+
+  <div class="footer-columns">
+  <div class="footer-col">
+  <h4>Company</h4>
+  <ul>
+    <li><a href="#">Fixed Bid</a></li>
+    <li><a href="#">Who We Are</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  </div>
+
+  <div class="footer-col">
+  <h4>Resources</h4>
+  <ul>
+    <li><a href="#">For Accelerators & Investors</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Glossary</a></li>
+    <li><a href="#">SaaS Metrics</a></li>
+    <li><a href="#">Case Studies</a></li>
+  </ul>
+  </div>
+
+  <div class="footer-col">
+  <h4>Ultimate Guides</h4>
+  <ul>
+    <li><a href="#">Design Sprint</a></li>
+    <li><a href="#">Aha Moment</a></li>
+    <li><a href="#">Cost To Build a SaaS Product</a></li>
+    <li><a href="#">Product Development</a></li>
+    <li><a href="#">SaaS Framework</a></li>
+  </ul>
+  </div>
+  </div>
+  </div>
+
+  <div class="footer-bottom">
+  <a href="#">Privacy</a>
+  <a href="#">GDPR</a>
+  <span>hello@crayond.com</span>
+  <span>+91 74483 90100</span>
+  <span>2/498, Ayshika, Sunrise Avenue 2nd Cross Street, Neelankarai, Chennai, India</span>
+  </div>
+  </footer>
+
+  <script>
+  function toggleView(mode) {
   const ideaBtn = document.getElementById('btn-idea');
   const buildBtn = document.getElementById('btn-build');
   const ideaSection = document.getElementById('idea-section');
   const buildSection = document.getElementById('build-section');
 
   if (mode === 'idea') {
-    ideaSection.style.display = 'grid';
-    buildSection.style.display = 'none';
-    ideaBtn.classList.add('active');
-    buildBtn.classList.remove('active');
+  ideaSection.style.display = 'grid';
+  buildSection.style.display = 'none';
+  ideaBtn.classList.add('active');
+  buildBtn.classList.remove('active');
   } else {
-    buildSection.style.display = 'grid';
-    ideaSection.style.display = 'none';
-    buildBtn.classList.add('active');
-    ideaBtn.classList.remove('active');
+  buildSection.style.display = 'grid';
+  ideaSection.style.display = 'none';
+  buildBtn.classList.add('active');
+  ideaBtn.classList.remove('active');
   }
-}
-</script>
-<script>
-document.querySelectorAll('.faq-question').forEach(button => {
+  }
+  </script>
+
+  <script>
+  document.querySelectorAll('.faq-question').forEach(button => {
   button.addEventListener('click', () => {
-    const item = button.closest('.faq-item');
-    item.classList.toggle('active');
+  const item = button.closest('.faq-item');
+  item.classList.toggle('active');
   });
-});
+  });
+
 </script>
 </body>
 </html>
